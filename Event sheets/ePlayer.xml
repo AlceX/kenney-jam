@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ePlayer</name>
+    <events>
+        <event-group description="Handles animation for the player character." sid="413788067019536" title="ePlayer/Animations">
+            <sub-events>
+                <event-block sid="604059762294863">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="846305174836080" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="180808644353179" type="spr_player_base">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="766767931026704" type="spr_player_mask">
+                            <param id="0" name="Object">spr_player_base</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="994164547155130" type="spr_player_mask">
+                            <param id="0" name="Pin to">spr_player_base</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Smart way to handle animations from stemkoski: &#x0D;&#x0A;https://www.scirra.com/tutorials/1117/animation-management-in-8-direction-games</comment>
+                <comment>Dunno whether I should break up the speed expression to make it more readable...</comment>
+                <event-block sid="354115348200719">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" name="Is moving" sid="754256919274554" type="spr_player_base" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Set speed" sid="745438482317974" type="spr_player_mask">
+                            <param id="0" name="Speed">round(lerp(3, 10, unlerp(0, spr_player_base.8Direction.MaxSpeed, abs(spr_player_base.8Direction.Speed))))</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="919725774412907" type="spr_player_mask">
+                            <param id="0" name="Animation">&quot;walk_&quot; &amp; floor( (((spr_player_base.Angle + 45) % 360) / 90) )</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="272626621576813">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="822230388786728" type="spr_player_base" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="972842766051881" type="spr_player_mask">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="600044646373817" title="ePlayer/Camera">
+            <sub-events>
+                <event-block sid="722381838930690">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="381070415243439" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="389065108170221" type="obj_camera">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="653727988530023">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="178811503348647" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="357043553492347" type="obj_camera">
+                            <param id="0" name="Object">spr_player_base</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
