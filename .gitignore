@@ -1,0 +1,5 @@
+# UI State
+*.uistate.xml
+# Backup files
+*.capx.autosave
+*.capx.backup1
