@@ -24,35 +24,47 @@
                     </actions>
                 </event-block>
                 <comment>Smart way to handle animations from stemkoski: &#x0D;&#x0A;https://www.scirra.com/tutorials/1117/animation-management-in-8-direction-games</comment>
-                <comment>Dunno whether I should break up the speed expression to make it more readable...</comment>
-                <event-block sid="354115348200719">
+                <event-block sid="622080427104939">
                     <conditions>
-                        <condition behavior="8Direction" id="0" name="Is moving" sid="754256919274554" type="spr_player_base" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="685004697285988" type="spr_player_mask">
+                            <param id="0" name="Instance variable">is_attacking</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="6" name="Set speed" sid="745438482317974" type="spr_player_mask">
-                            <param id="0" name="Speed">round(lerp(3, 10, unlerp(0, spr_player_base.8Direction.MaxSpeed, abs(spr_player_base.8Direction.Speed))))</param>
-                        </action>
                         <action id="4" name="Set animation" sid="919725774412907" type="spr_player_mask">
                             <param id="0" name="Animation">&quot;walk_&quot; &amp; floor( (((spr_player_base.Angle + 45) % 360) / 90) )</param>
                             <param id="1" name="From">0</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="272626621576813">
-                    <conditions>
-                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="822230388786728" type="spr_player_base" />
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="972842766051881" type="spr_player_mask">
-                            <param id="0" name="Frame number">1</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <comment>Dunno whether I should break up the speed expression to make it more readable...</comment>
+                        <event-block sid="354115348200719">
+                            <conditions>
+                                <condition behavior="8Direction" id="0" name="Is moving" sid="754256919274554" type="spr_player_base" />
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set speed" sid="745438482317974" type="spr_player_mask">
+                                    <param id="0" name="Speed">round(lerp(3, 10, unlerp(0, spr_player_base.8Direction.MaxSpeed, abs(spr_player_base.8Direction.Speed))))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="219816061354925">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="174152086524673" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="972842766051881" type="spr_player_mask">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="600044646373817" title="ePlayer/Camera">
+        <event-group description="Controls the camera object." sid="600044646373817" title="ePlayer/Camera">
             <sub-events>
+                <comment>Want to make a fancier camera but don&apos;t have much ideas yet...</comment>
                 <event-block sid="722381838930690">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="381070415243439" type="System" />
@@ -73,6 +85,171 @@
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="For now just handles sword slashing." sid="600624675499879" title="ePlayer/Attacks">
+            <sub-events>
+                <event-block sid="980426768415060">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="493182502201662" type="spr_player_mask">
+                            <param id="0" name="Instance variable">is_attacking</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="786524321132415" type="spr_sword">
+                            <param id="0" name="Object">spr_player_mask</param>
+                            <param id="1" name="Image point (optional)">&quot;sword&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="801173704912936">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="148034517351793" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="121983977518575">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="337237854128024" type="Keyboard">
+                                    <param id="0" name="Key">32 (Barra Espaciadora)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="754288080325697" type="Function">
+                                    <param id="0" name="Name">&quot;ePlayer/Attacks.sword_slash&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="833403791049812">
+                    <conditions>
+                        <condition id="0" name="On function" sid="440695594326436" type="Function">
+                            <param id="0" name="Name">&quot;ePlayer/Attacks.sword_slash&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>I&apos;m pretty sure there&apos;s a clearer way to say &quot;sword angle = direction where player is facing...&quot; I think I&apos;d need to properly understand the floor code though.</comment>
+                        <comment>And yes, I&apos;m calling the animation here but it should be in the animation group... Sorry this just feels like the simplest way :c</comment>
+                        <event-block sid="180000812124891">
+                            <conditions />
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="278630195728323" type="spr_player_mask">
+                                    <param id="0" name="Instance variable">is_attacking</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="934105520119789" type="spr_player_mask">
+                                    <param id="0" name="Animation">&quot;attack_&quot; &amp; floor( (((spr_player_base.Angle + 45) % 360) / 90) )</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="997352738218454" type="spr_sword">
+                                    <param id="0" name="Angle">floor( (((spr_player_base.Angle + 45) % 360) / 90)) * 90</param>
+                                </action>
+                                <action id="0" name="Call function" sid="451001901545492" type="Function">
+                                    <param id="0" name="Name">&quot;ePlayer/Attacks.set_sword_z&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="909528067156062" type="spr_sword">
+                                    <param id="0" name="Object">spr_player_mask</param>
+                                    <param id="1" name="Image point (optional)">&quot;sword&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="274066414323899" type="Function">
+                                    <param id="0" name="Name">&quot;ePlayer/Attacks.start_sword_dash&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action behavior="8Direction" id="0" name="Stop" sid="743204822147479" type="spr_player_base" />
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="984004968433280" type="spr_player_base">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="391759318363525" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="788532316912070" type="spr_player_base">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="SwordDash" id="5" name="Set enabled" sid="328291382941561" type="spr_player_base">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="563493037079090" type="spr_sword">
+                                    <param id="0" name="X">-100</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="861047741529879" type="spr_player_mask">
+                                    <param id="0" name="Instance variable">is_attacking</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="431979785650685">
+                    <conditions>
+                        <condition id="0" name="On function" sid="604680487567708" type="Function">
+                            <param id="0" name="Name">&quot;ePlayer/Attacks.set_sword_z&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="524296360929764">
+                            <conditions>
+                                <condition id="-11" name="Is within angle" sid="484545577851359" type="spr_sword">
+                                    <param id="0" name="Within">0.5</param>
+                                    <param id="1" name="Angle">180</param>
+                                </condition>
+                                <condition id="-11" name="Is within angle" sid="501084722521748" type="spr_sword">
+                                    <param id="0" name="Within">0.5</param>
+                                    <param id="1" name="Angle">270</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-29" name="Move to object" sid="346911145043723" type="spr_sword">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Object">spr_player_mask</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="822895707378551">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="447503119642967" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-29" name="Move to object" sid="163664693491046" type="spr_sword">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">spr_player_mask</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="620214089827344">
+                    <conditions>
+                        <condition id="0" name="On function" sid="911053888819190" type="Function">
+                            <param id="0" name="Name">&quot;ePlayer/Attacks.start_sword_dash&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="613615742907054">
+                            <conditions />
+                            <actions>
+                                <action behavior="SwordDash" id="5" name="Set enabled" sid="269285783187173" type="spr_player_base">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="SwordDash" id="3" name="Set angle of motion" sid="133726576336855" type="spr_player_base">
+                                    <param id="0" name="Angle">spr_sword.Angle</param>
+                                </action>
+                                <action behavior="SwordDash" id="0" name="Set speed" sid="329180406776926" type="spr_player_base">
+                                    <param id="0" name="Speed">100 + Self.8Direction.Speed</param>
+                                </action>
+                                <action behavior="SwordDash" id="1" name="Set acceleration" sid="317114509509170" type="spr_player_base">
+                                    <param id="0" name="Acceleration">Self.SwordDash.Speed * -2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

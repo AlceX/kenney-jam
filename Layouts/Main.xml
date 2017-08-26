@@ -99,12 +99,22 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="SwordDash">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>107.823074341</x>
-                        <y>56.200157166</y>
+                        <x>100</x>
+                        <y>100</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -122,14 +132,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <is_attacking>false</is_attacking>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>182.368804932</x>
-                        <y>56.200843811</y>
+                        <x>-100</x>
+                        <y>-50</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -157,13 +170,35 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>26.004837036</x>
-                        <y>-14.708587646</y>
+                        <x>-100</x>
+                        <y>-100</y>
                         <z>0</z>
                         <width>10</width>
                         <height>10</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_sword" uid="4">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-50</x>
+                        <y>-100</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.0625</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

@@ -10,10 +10,13 @@
     <unique-id>wqwxpefy5tak</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -52,6 +55,9 @@
                     <behavior-type name="8Direction" sid="522174908908456">
                         <behavior id="EightDir" />
                     </behavior-type>
+                    <behavior-type name="SwordDash" sid="884362552607943">
+                        <behavior id="Bullet" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="884830445028920" speed="5">
@@ -61,6 +67,9 @@
             </object-type>
             <object-type name="spr_player_mask" sid="614557986667974">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="is_attacking" sid="179910632847997" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Pin" sid="773444651238935">
                         <behavior id="Pin" />
@@ -91,6 +100,58 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_10.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
+                    <animation framecount="2" loop="0" name="attack_0" pingpong="0" repeatcount="1" repeatto="0" sid="646928980915728" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_18.png">
+                            <image-point name="sword" x="0.3125" y="0.734375" />
+                            <collision-poly>
+                                <point x="0.171875" y="0.171875" />
+                                <point x="0.5" y="0.09375" />
+                                <point x="0.75" y="0.25" />
+                                <point x="0.78125" y="0.5" />
+                                <point x="0.796875" y="0.796875" />
+                                <point x="0.5" y="0.859375" />
+                                <point x="0.140625" y="0.859375" />
+                                <point x="0.140625" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_19.png">
+                            <image-point name="sword" x="0.4375" y="0.734375" />
+                            <collision-poly>
+                                <point x="0.171875" y="0.171875" />
+                                <point x="0.5" y="0.09375" />
+                                <point x="0.75" y="0.25" />
+                                <point x="0.78125" y="0.5" />
+                                <point x="0.796875" y="0.796875" />
+                                <point x="0.5" y="0.859375" />
+                                <point x="0.140625" y="0.859375" />
+                                <point x="0.140625" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="attack_1" pingpong="0" repeatcount="1" repeatto="0" sid="780756505457515" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_06.png">
+                            <image-point name="sword" x="0.234375" y="0.75" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_07.png">
+                            <image-point name="sword" x="0.265625" y="0.75" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="attack_2" pingpong="0" repeatcount="1" repeatto="0" sid="544475156949691" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_21.png">
+                            <image-point name="sword" x="0.703125" y="0.734375" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_22.png">
+                            <image-point name="sword" x="0.578125" y="0.734375" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="attack_3" pingpong="0" repeatcount="1" repeatto="0" sid="312012964436029" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_09.png">
+                            <image-point name="sword" x="0.734375" y="0.59375" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_10.png">
+                            <image-point name="sword" x="0.703125" y="0.59375" />
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="obj_camera" sid="452528086486858">
@@ -105,6 +166,31 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="spr_sword" sid="672466769128865">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830967468016178" speed="5">
+                        <frame duration="1" hotspotX="0.0625" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\custom_assets\sword_basic.png">
+                            <collision-poly>
+                                <point x="0.875" y="0.266667" />
+                                <point x="0.953125" y="0.5" />
+                                <point x="0.859375" y="0.7" />
+                                <point x="0.140625" y="0.7" />
+                                <point x="0.0625" y="0.5" />
+                                <point x="0.125" y="0.266667" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="System">
+            <object-type name="Keyboard" sid="648476534931829">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Function" sid="468165594661466">
+                <plugin id="Function" />
             </object-type>
         </object-folder>
         <object-type name="tm_rpg_base" sid="969925967062855">
@@ -123,7 +209,10 @@
         </event-folder>
         <event-sheet>ePlayer.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="5" />
+        <global-instance type="Function" uid="6" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>
