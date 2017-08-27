@@ -106,7 +106,6 @@
         </event-group>
         <event-group description="Controls the camera object." sid="600044646373817" title="ePlayer/Camera">
             <sub-events>
-                <comment>Want to make a fancier camera but don&apos;t have much ideas yet...</comment>
                 <event-block sid="722381838930690">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="381070415243439" type="System" />
@@ -115,6 +114,10 @@
                         <action id="-15" name="Set visible" sid="389065108170221" type="obj_camera">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-4" name="Set position to another object" sid="372524733987345" type="obj_camera">
+                            <param id="0" name="Object">spr_player_base</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="653727988530023">
@@ -122,11 +125,38 @@
                         <condition id="-1" name="Every tick" sid="178811503348647" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-4" name="Set position to another object" sid="357043553492347" type="obj_camera">
-                            <param id="0" name="Object">spr_player_base</param>
-                            <param id="1" name="Image point (optional)">0</param>
+                        <action id="-22" name="Set angle toward position" sid="891422636807775" type="obj_camera">
+                            <param id="0" name="X">spr_player_base.X</param>
+                            <param id="1" name="Y">spr_player_base.Y</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="398143267872727">
+                            <conditions>
+                                <condition behavior="8Direction" id="0" name="Is moving" sid="949501003379958" type="spr_player_base" />
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Move forward" sid="210576179243874" type="obj_camera">
+                                    <param id="0" name="Distance">spr_player_base.8Direction.Speed * dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="181748268869805">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="176829257178413" type="System" />
+                                <condition id="-8" name="Compare two values" sid="240810871089583" type="System">
+                                    <param id="0" name="First value">distance(obj_camera.X, obj_camera.Y, spr_player_base.X, spr_player_base.Y)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Move forward" sid="499498271623361" type="obj_camera">
+                                    <param id="0" name="Distance">spr_player_base.8Direction.MaxSpeed * dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
