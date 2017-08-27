@@ -389,5 +389,34 @@
         </layer>
     </layers>
     <nonworld-instances />
-    <effects />
+    <effects>
+        <effect-type name="VHSDamage">
+            <effect id="vhs" />
+            <effect-instance type="VHSDamage">
+                <parameters>
+                    <amount>0.3</amount>
+                    <intensity>0.8</intensity>
+                    <lines>200</lines>
+                    <power>0</power>
+                    <seed>0</seed>
+                </parameters>
+            </effect-instance>
+        </effect-type>
+        <effect-type name="RGBAChannelSeparation">
+            <effect id="separatechannel" />
+            <effect-instance type="RGBAChannelSeparation">
+                <parameters>
+                    <alpha-x>0.0</alpha-x>
+                    <alpha-y>0.0</alpha-y>
+                    <blue-x>0.0</blue-x>
+                    <blue-y>0.0</blue-y>
+                    <green-x>0.0</green-x>
+                    <green-y>0.0</green-y>
+                    <intensity>1</intensity>
+                    <red-x>0.0</red-x>
+                    <red-y>0.0</red-y>
+                </parameters>
+            </effect-instance>
+        </effect-type>
+    </effects>
 </c2layout>

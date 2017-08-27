@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ePlayer</name>
     <events>
+        <comment>Included in elMain.</comment>
+        <include>eGlitches</include>
         <event-group description="Handles animation for the player character." sid="413788067019536" title="ePlayer/Animations">
             <sub-events>
                 <event-block sid="604059762294863">
@@ -116,6 +118,23 @@
                                     <param id="1" name="Parameter {n}">Enemies.UID{###}spr_sword.Angle{###}1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="650444618788205">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="853539524290330" type="System">
+                                            <param id="0" name="First value">random(0, 4)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="956111389666161" type="Function">
+                                            <param id="0" name="Name">&quot;eGlitches/Activate_Glitch&quot;</param>
+                                            <param id="1" name="Parameter {n}">Enemies.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

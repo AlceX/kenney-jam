@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<c2effect>
+	<!-- About -->
+	<id>separatechannel</id>			<!-- Never change the ID.  Change the name instead -->
+	<name>RGBA channel separation</name>
+	<category>Color</category>
+	<description>Offset the RGBA-channel.</description>
+	<author>Jan Raap a.k.a. oppenheimer</author>
+	
+	<!-- Many thanks to David Clark who wrote this shader for Construct Classic -->
+	
+	<!-- Settings -->
+	
+	<!-- Extend the bounding box for effect processing by a number of pixels to show the edges
+		 of effects which go beyond the object edges, e.g. blur and warp. -->
+	<extend-box-horizontal>0</extend-box-horizontal>
+	<extend-box-vertical>0</extend-box-vertical>
+	
+	<!-- Set to true if the background is sampled (samplerBack is referenced at all in the shader) -->
+	<blends-background>false</blends-background>
+	
+	<!-- Set to true if the background is not sampled at 1:1 with the foreground (e.g. the
+		 background texture co-ordinates are modified in some way by the shader, as done
+		 by Glass and Lens) -->
+	<cross-sampling>false</cross-sampling>
+	
+	<!-- Set to true if the effect changes over time, e.g. Noise or Warp effects. -->
+	<animated>false</animated>
+	
+	<!-- Parameters -->
+	<parameters>
+        <param>
+			<name>Red X</name>
+			<description>Red X-Offset in pixels</description>
+			<type>float</type>
+			<initial>0.0</initial>
+			<uniform>redx</uniform>
+		</param>
+		<param>
+			<name>Green X</name>
+			<description>Green X-Offset in pixels</description>
+			<type>float</type>
+			<initial>0.0</initial>
+			<uniform>greenx</uniform>
+		</param>
+		<param>
+			<name>Blue X</name>
+			<description>Blue X-Offset in pixels</description>
+			<type>float</type>
+			<initial>0.0</initial>
+			<uniform>bluex</uniform>
+		</param>		
+		<param>
+			<name>Alpha X</name>
+			<description>Alpha X-Offset in pixels</description>
+			<type>float</type>
+			<initial>0.0</initial>
+			<uniform>alphax</uniform>
+		</param>	
+		
+        <param>
+			<name>Red Y</name>
+			<description>Red Y-Offset in pixels</description>
+			<type>float</type>
+			<initial>0.0</initial>
+			<uniform>redy</uniform>
+		</param>
+		<param>
+			<name>Green Y</name>
+			<description>Green Y-Offset in pixels</description>
+			<type>float</type>
+			<initial>0.0</initial>
+			<uniform>greeny</uniform>
+		</param>
+		<param>
+			<name>Blue Y</name>
+			<description>Blue Y-Offset in pixels</description>
+			<type>float</type>
+			<initial>0.0</initial>
+			<uniform>bluey</uniform>
+		</param>		
+		<param>
+			<name>Alpha Y</name>
+			<description>Alpha Y-Offset in pixels</description>
+			<type>float</type>
+			<initial>0.0</initial>
+			<uniform>alphay</uniform>
+		</param>	
+
+		<param>
+			<name>Intensity</name>
+			<description>Intensity level, from 0 to 100.</description>
+			<type>percent</type>
+			<initial>1</initial>
+			<uniform>intensity</uniform>
+		</param>
+	</parameters>
+</c2effect>

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eEnemies</name>
     <events>
+        <comment>Included in elMain.</comment>
         <event-group description="For code common to all enemy types, like knockback." sid="826969774823805" title="eEnemies/CommonBehaviors">
             <sub-events>
                 <comment>0: UID &#x0D;&#x0A;1: angle of motion for knockback&#x0D;&#x0A;2: damage dealt</comment>

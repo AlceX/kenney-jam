@@ -22,7 +22,10 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Jan Raap a.k.a. oppenheimer" id="separatechannel">RGBA channel separation</effect>
+        <effect author="Joannesalfa and oppenheimer" id="vhs">VHS damage</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -293,6 +296,7 @@
         </event-folder>
         <event-sheet>ePlayer.xml</event-sheet>
         <event-sheet>eEnemies.xml</event-sheet>
+        <event-sheet>eGlitches.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eGlitches</name>
+    <events>
+        <comment>Included in ePlayer.</comment>
+        <comment>0: UID of enemy that was hit.</comment>
+        <event-block sid="405034482740799">
+            <conditions>
+                <condition id="0" name="On function" sid="468945758782575" type="Function">
+                    <param id="0" name="Name">&quot;eGlitches/Activate_Glitch&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>Called from ePlayer.</comment>
+                <event-block sid="777576139938617">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="151992454035446" type="Function">
+                            <param id="0" name="Name">&quot;eGlitches/Glitches.teleport&quot;</param>
+                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="All the glitches that can happen when you swing your sword." sid="381129070775330" title="eGlitches/Glitches">
+            <sub-events>
+                <comment>0: UID of enemy that was hit</comment>
+                <event-block sid="412049022703204">
+                    <conditions>
+                        <condition id="0" name="On function" sid="754335749730858" type="Function">
+                            <param id="0" name="Name">&quot;eGlitches/Glitches.teleport&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="267352793579191">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="395286696881259" type="System">
+                                    <param id="0" name="First value">choose(&quot;player&quot;, &quot;enemy&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;player&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="761669848226730" type="spr_player_base">
+                                    <param id="0" name="X">clamp(Self.X + random(-300, 300), 100, LayoutWidth - 100)</param>
+                                    <param id="1" name="Y">clamp(Self.Y+ random(-300, 300), 100, LayoutWidth - 100)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="477597100921234" type="Function">
+                                    <param id="0" name="Name">&quot;eGlitches/Effects.screen_vhs_distortion&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="529338353019948">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="953641181525025" type="System" />
+                                <condition id="-14" name="Pick by unique ID" sid="888038971659471" type="Enemies">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="553505068250333" type="Enemies">
+                                    <param id="0" name="X">clamp(Self.X + random(-300, 300), 100, LayoutWidth - 100)</param>
+                                    <param id="1" name="Y">clamp(Self.Y+ random(-300, 300), 100, LayoutWidth - 100)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Controls glitch looking screen effects." sid="327711995662255" title="eGlitches/Effects">
+            <sub-events>
+                <event-block sid="241804544277009">
+                    <conditions>
+                        <condition id="0" name="On function" sid="815956361416341" type="Function">
+                            <param id="0" name="Name">&quot;eGlitches/Effects.screen_vhs_distortion&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="662120359446768">
+                            <conditions />
+                            <actions>
+                                <action id="-31" name="Set layout effect parameter" sid="865420868884328" type="System">
+                                    <param id="0" name="Effect">&quot;VHSDamage&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">20</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="906084453250967" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="534227008929613" type="System">
+                                    <param id="0" name="Effect">&quot;VHSDamage&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="333573678409813">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="248939645612140" type="System">
+                                    <param id="0" name="Count">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="816531193161351" type="System">
+                                    <param id="0" name="Seconds">0.05*loopindex</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="545157668807311" type="System">
+                                    <param id="0" name="Effect">&quot;VHSDamage&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">Random(100)/1000</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="374204818919400" type="System">
+                                    <param id="0" name="Effect">&quot;VHSDamage&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">cos(time)/10</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="674128607139737" type="System">
+                                    <param id="0" name="Effect">&quot;VHSDamage&quot;</param>
+                                    <param id="1" name="Parameter index">4</param>
+                                    <param id="2" name="Value">random(250) + 50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
