@@ -239,7 +239,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="837365524237122" type="System">
                                     <param id="0" name="Object to create">spr_simple_enemy</param>
-                                    <param id="1" name="Layer">&quot;enemies&quot;</param>
+                                    <param id="1" name="Layer">&quot;objects&quot;</param>
                                     <param id="2" name="X">spr_sword.ImagePointX(1)</param>
                                     <param id="3" name="Y">spr_sword.ImagePointY(1)</param>
                                 </action>

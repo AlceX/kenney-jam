@@ -92,31 +92,31 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="4" loop="1" name="walk_0" pingpong="0" repeatcount="1" repeatto="0" sid="844712191482702" speed="10">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_18.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_17.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_19.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_18.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_17.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_19.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                     <animation framecount="4" loop="1" name="walk_1" pingpong="0" repeatcount="1" repeatto="0" sid="237075709845003" speed="10">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_06.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_05.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_07.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_06.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_07.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                     <animation framecount="4" loop="1" name="walk_2" pingpong="0" repeatcount="1" repeatto="0" sid="799439134132076" speed="10">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_21.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_20.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_22.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_21.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_20.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_22.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                     <animation framecount="4" loop="1" name="walk_3" pingpong="0" repeatcount="1" repeatto="0" sid="605918107766153" speed="10">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_09.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_08.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_10.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_09.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_08.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_10.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                     <animation framecount="2" loop="0" name="attack_0" pingpong="0" repeatcount="1" repeatto="0" sid="646928980915728" speed="6">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_18.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_18.png">
                             <image-point name="sword" x="0.3125" y="0.734375" />
                             <collision-poly>
                                 <point x="0.171875" y="0.171875" />
@@ -129,7 +129,7 @@
                                 <point x="0.140625" y="0.5" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_19.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_19.png">
                             <image-point name="sword" x="0.4375" y="0.734375" />
                             <collision-poly>
                                 <point x="0.171875" y="0.171875" />
@@ -144,26 +144,26 @@
                         </frame>
                     </animation>
                     <animation framecount="2" loop="0" name="attack_1" pingpong="0" repeatcount="1" repeatto="0" sid="780756505457515" speed="6">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_06.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_06.png">
                             <image-point name="sword" x="0.234375" y="0.75" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_07.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_07.png">
                             <image-point name="sword" x="0.265625" y="0.75" />
                         </frame>
                     </animation>
                     <animation framecount="2" loop="0" name="attack_2" pingpong="0" repeatcount="1" repeatto="0" sid="544475156949691" speed="6">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_21.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_21.png">
                             <image-point name="sword" x="0.703125" y="0.734375" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_22.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_22.png">
                             <image-point name="sword" x="0.578125" y="0.734375" />
                         </frame>
                     </animation>
                     <animation framecount="2" loop="0" name="attack_3" pingpong="0" repeatcount="1" repeatto="0" sid="312012964436029" speed="6">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_09.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_09.png">
                             <image-point name="sword" x="0.734375" y="0.59375" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_10.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\sokoban\PNG\Default size\Player\player_10.png">
                             <image-point name="sword" x="0.703125" y="0.59375" />
                         </frame>
                     </animation>
@@ -224,7 +224,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="950251413927205" speed="7">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\abstract_platformer\PNG\Enemies\enemyWalking_2.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\abstract_platformer\PNG\Enemies\enemyWalking_2.png">
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -232,7 +232,7 @@
                                 <point x="1" y="0" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\abstract_platformer\PNG\Enemies\enemyWalking_1.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\abstract_platformer\PNG\Enemies\enemyWalking_1.png">
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -242,7 +242,7 @@
                         </frame>
                     </animation>
                     <animation framecount="2" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="748753336999979" speed="5">
-                        <frame duration="1" hotspotX="0.510204" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\abstract_platformer\PNG\Enemies\enemyWalking_3.png">
+                        <frame duration="1" hotspotX="0.510204" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\abstract_platformer\PNG\Enemies\enemyWalking_3.png">
                             <collision-poly>
                                 <point x="0.204082" y="0.263158" />
                                 <point x="0.489796" y="0" />
@@ -254,7 +254,7 @@
                                 <point x="0.183673" y="0.5" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.514286" hotspotY="0.512195" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\abstract_platformer\PNG\Enemies\enemyWalking_4.png">
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\abstract_platformer\PNG\Enemies\enemyWalking_4.png">
                             <collision-poly>
                                 <point x="0.142857" y="0.121951" />
                                 <point x="0.485714" y="0" />
@@ -285,6 +285,44 @@
             <texture />
             <tiles />
         </object-type>
+        <object-type name="spr_background_objects" sid="745876185114734">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="tree01" pingpong="0" repeatcount="1" repeatto="0" sid="532921261978124" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.984375" original-source="C:\Users\gamedev\Desktop\Kenney Jam\custom_assets\tree.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="tree02" pingpong="0" repeatcount="1" repeatto="0" sid="135632613581026" speed="5">
+                    <frame duration="1" hotspotX="0.481481" hotspotY="0.892857" original-source="C:\Users\gamedev\Desktop\Kenney Jam\custom_assets\tree_2.png">
+                        <collision-poly>
+                            <point x="0.240741" y="0.133929" />
+                            <point x="0.5" y="0.00892857" />
+                            <point x="0.740741" y="0.142857" />
+                            <point x="0.888889" y="0.553571" />
+                            <point x="0.907407" y="0.919643" />
+                            <point x="0.0740741" y="0.937501" />
+                            <point x="0.111111" y="0.553571" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="bush01" pingpong="0" repeatcount="1" repeatto="0" sid="137312510502329" speed="5">
+                    <frame duration="1" hotspotX="0.490566" hotspotY="0.777778" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\rpg\PNG\rpgTile155.png">
+                        <collision-poly>
+                            <point x="0.339623" y="0.0888889" />
+                            <point x="0.509434" y="0.0222222" />
+                            <point x="0.679245" y="0.0888889" />
+                            <point x="0.849057" y="0.288889" />
+                            <point x="0.886792" y="0.733333" />
+                            <point x="0.509434" y="0.888889" />
+                            <point x="0.132075" y="0.733333" />
+                            <point x="0.188679" y="0.288889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="bush02" pingpong="0" repeatcount="1" repeatto="0" sid="421413795059178" speed="5">
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.826087" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\rpg\PNG\rpgTile156.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemies" plugin-id="Sprite" sid="272080187583977">
@@ -314,6 +352,13 @@
                     <effect id="hexpixellate" />
                 </effect-type>
             </effects>
+        </family>
+        <family name="ZOrder" plugin-id="Sprite" sid="882237512847152">
+            <members>
+                <member>spr_background_objects</member>
+                <member>spr_player_mask</member>
+                <member>spr_simple_enemy</member>
+            </members>
         </family>
     </families>
     <layout-folder>

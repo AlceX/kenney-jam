@@ -5,5 +5,21 @@
     <events>
         <include>eEnemies</include>
         <include>ePlayer</include>
+        <event-group description="" sid="366181770019009" title="elMain/ZOrdering">
+            <sub-events>
+                <event-block sid="611111024373114">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="255695598353306" type="System">
+                            <param id="0" name="Object">ZOrder</param>
+                            <param id="1" name="Expression">ZOrder.Y</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="132540124878083" type="ZOrder" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
