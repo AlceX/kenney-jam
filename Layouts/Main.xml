@@ -147,7 +147,7 @@
                     </properties>
                     <instance-variables>
                         <State>follow</State>
-                        <Health>3</Health>
+                        <Health>10</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Knockback">
@@ -172,6 +172,17 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -196,7 +207,7 @@
                     </properties>
                     <instance-variables>
                         <State>follow</State>
-                        <Health>3</Health>
+                        <Health>10</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Knockback">
@@ -221,6 +232,17 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -245,7 +267,7 @@
                     </properties>
                     <instance-variables>
                         <State>follow</State>
-                        <Health>3</Health>
+                        <Health>10</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Knockback">
@@ -270,6 +292,17 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -427,6 +460,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

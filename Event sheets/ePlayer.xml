@@ -25,6 +25,46 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="291844083399223">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="884621210016548" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="944990889783947" type="spr_sword">
+                            <param id="0" name="Effect">&quot;VHSDamage&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">cos(time)/10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="665728029075378">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="549343596428780" type="System">
+                            <param id="0" name="Interval (seconds)">random(1.0)/10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="410518648644939" type="spr_sword">
+                            <param id="0" name="Effect">&quot;VHSDamage&quot;</param>
+                            <param id="1" name="Parameter index">4</param>
+                            <param id="2" name="Value">random(250) + 50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="162905391905880">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="840272196519722" type="System">
+                            <param id="0" name="Interval (seconds)">random(1.0)/10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="151028823021846" type="spr_sword">
+                            <param id="0" name="Effect">&quot;VHSDamage&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">random(100)/1000</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>Smart way to handle animations from stemkoski: &#x0D;&#x0A;https://www.scirra.com/tutorials/1117/animation-management-in-8-direction-games</comment>
                 <event-block sid="622080427104939">
                     <conditions>

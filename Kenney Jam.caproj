@@ -183,6 +183,11 @@
             </object-type>
             <object-type name="spr_sword" sid="672466769128865">
                 <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="VHSDamage">
+                        <effect id="vhs" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830967468016178" speed="5">
                         <frame duration="1" hotspotX="0.0625" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\custom_assets\sword_basic.png">
@@ -296,6 +301,11 @@
                     <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
+            <effects>
+                <effect-type name="VHSDamage">
+                    <effect id="vhs" />
+                </effect-type>
+            </effects>
         </family>
     </families>
     <layout-folder>
