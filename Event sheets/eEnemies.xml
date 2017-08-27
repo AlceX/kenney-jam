@@ -198,6 +198,39 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="448211264359469">
+                    <conditions>
+                        <condition id="0" name="On function" sid="426712787563570" type="Function">
+                            <param id="0" name="Name">&quot;eEnemies/SimpleEnemy.Spawn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Called from eGlitches/Glitches.</comment>
+                        <comment>Return value is used in eGlitches to apply the glitch effect to this enemy.</comment>
+                        <event-block sid="537059745412704">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="837365524237122" type="System">
+                                    <param id="0" name="Object to create">spr_simple_enemy</param>
+                                    <param id="1" name="Layer">&quot;enemies&quot;</param>
+                                    <param id="2" name="X">spr_sword.ImagePointX(1)</param>
+                                    <param id="3" name="Y">spr_sword.ImagePointY(1)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="435472548336908" type="Function">
+                                    <param id="0" name="Name">&quot;eEnemies/CommonBehaviors.Recieve_Damage&quot;</param>
+                                    <param id="1" name="Parameter {n}">spr_simple_enemy.UID{###}spr_sword.Angle</param>
+                                </action>
+                                <action behavior="Knockback" id="0" name="Set speed" sid="450621270782417" type="spr_simple_enemy">
+                                    <param id="0" name="Speed">Self.Knockback.Speed * 2</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="557683150645735" type="Function">
+                                    <param id="0" name="Value">spr_simple_enemy.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

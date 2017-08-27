@@ -161,6 +161,11 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Invincibility" />
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="follow">
                             <properties>
                                 <speed>0</speed>
@@ -221,6 +226,11 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Invincibility" />
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="follow">
                             <properties>
                                 <speed>0</speed>
@@ -281,6 +291,11 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Invincibility" />
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="follow">
                             <properties>
                                 <speed>0</speed>

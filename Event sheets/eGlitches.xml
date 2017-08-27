@@ -18,7 +18,7 @@
                     <conditions />
                     <actions>
                         <action id="0" name="Call function" sid="151992454035446" type="Function">
-                            <param id="0" name="Name">&quot;eGlitches/Glitches.teleport&quot;</param>
+                            <param id="0" name="Name">&quot;eGlitches/Glitches.&quot; &amp; choose(&quot;teleport&quot;, &quot;flip_enemy&quot;, &quot;spawn_enemy&quot;)</param>
                             <param id="1" name="Parameter {n}">Function.Param(0)</param>
                         </action>
                     </actions>
@@ -70,6 +70,70 @@
                                 <action id="0" name="Call function" sid="354109059219570" type="Function">
                                     <param id="0" name="Name">&quot;eGlitches/Effects.enemy_vhs_distortion&quot;</param>
                                     <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="916624716793649">
+                    <conditions>
+                        <condition id="0" name="On function" sid="883676868956751" type="Function">
+                            <param id="0" name="Name">&quot;eGlitches/Glitches.flip_enemy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="284767685595214">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="653965832123663" type="Enemies">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="440665652869077" type="Function">
+                                    <param id="0" name="Name">&quot;eGlitches/Effects.enemy_vhs_distortion&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="717011485130080">
+                                    <conditions>
+                                        <condition id="8" name="Is flipped" sid="953972062281975" type="Enemies" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set flipped" sid="500486721903504" type="Enemies">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="702249764286919">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="161986543972805" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set flipped" sid="223238396276715" type="Enemies">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="988243318088774">
+                    <conditions>
+                        <condition id="0" name="On function" sid="690816924624927" type="Function">
+                            <param id="0" name="Name">&quot;eGlitches/Glitches.spawn_enemy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="280630237518736">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="764032455281348" type="Function">
+                                    <param id="0" name="Name">&quot;eGlitches/Effects.enemy_vhs_distortion&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Call(&quot;eEnemies/SimpleEnemy.Spawn&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
