@@ -66,6 +66,32 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>HACK: Kinda terrible but since I know I won&apos;t have time for more than &quot;simple_enemy&quot;...</comment>
+                <event-block sid="418156581044226">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="800822662590356" type="Enemies">
+                            <param id="0" name="Object">spr_simple_enemy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Spacing" id="3" name="Set angle of motion" sid="397424928164317" type="Enemies">
+                            <param id="0" name="Angle">angle(spr_simple_enemy.X, spr_simple_enemy.Y, Self.X, Self.Y)</param>
+                        </action>
+                        <action behavior="Spacing" id="0" name="Set speed" sid="652142961887062" type="Enemies">
+                            <param id="0" name="Speed">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="205858069857869">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="325874204221378" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Spacing" id="0" name="Set speed" sid="143782453251114" type="Enemies">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="Behaviour for the simple enemy. Basically just follows the player." sid="677224494252424" title="eEnemies/SimpleEnemy">

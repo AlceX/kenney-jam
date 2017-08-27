@@ -301,8 +301,8 @@
                 <behavior-type name="Invincibility" sid="408676811997347">
                     <behavior id="Flash" />
                 </behavior-type>
-                <behavior-type name="Solid" sid="722897810810458">
-                    <behavior id="solid" />
+                <behavior-type name="Spacing" sid="920789547457122">
+                    <behavior id="Bullet" />
                 </behavior-type>
             </behaviors>
             <effects>
