@@ -21,6 +21,7 @@
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Jan Raap a.k.a. oppenheimer" id="separatechannel">RGBA channel separation</effect>
@@ -265,6 +266,16 @@
         <object-type name="tm_rpg_base" sid="969925967062855">
             <plugin id="Tilemap" />
             <texture original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\rpg\Spritesheet\RPGpack_sheet.png" />
+            <tiles />
+        </object-type>
+        <object-type name="tm_collisions" sid="709166989974748">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="418313921153493">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
             <tiles />
         </object-type>
     </object-folder>
