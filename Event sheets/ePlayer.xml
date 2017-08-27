@@ -15,7 +15,7 @@
                         <action id="-15" name="Set visible" sid="180808644353179" type="spr_player_base">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-4" name="Set position to another object" sid="766767931026704" type="spr_player_mask">
+                        <action id="-4" name="Set position to another object" sid="563420974103102" type="spr_player_mask">
                             <param id="0" name="Object">spr_player_base</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
@@ -173,6 +173,10 @@
                             <param id="0" name="Object">spr_player_mask</param>
                             <param id="1" name="Image point (optional)">&quot;sword&quot;</param>
                         </action>
+                        <action id="0" name="Call function" sid="451001901545492" type="Function">
+                            <param id="0" name="Name">&quot;ePlayer/Attacks.set_sword_z&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="344278444192239">
@@ -187,6 +191,12 @@
                                     <param id="0" name="Name">&quot;eEnemies/CommonBehaviors.Recieve_Damage&quot;</param>
                                     <param id="1" name="Parameter {n}">Enemies.UID{###}spr_sword.Angle{###}1</param>
                                 </action>
+                                <action id="0" name="Play" sid="596015548812717" type="Audio">
+                                    <param id="0" name="Audio file">chop</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="650444618788205">
@@ -198,6 +208,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Play" sid="487264153298410" type="Audio">
+                                            <param id="0" name="Audio file">glitch</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">20</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="956111389666161" type="Function">
                                             <param id="0" name="Name">&quot;eGlitches/Activate_Glitch&quot;</param>
                                             <param id="1" name="Parameter {n}">Enemies.UID</param>
@@ -224,6 +240,12 @@
                                 <action id="0" name="Call function" sid="754288080325697" type="Function">
                                     <param id="0" name="Name">&quot;ePlayer/Attacks.sword_slash&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Play" sid="599583204912582" type="Audio">
+                                    <param id="0" name="Audio file">slash</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -252,10 +274,6 @@
                                 </action>
                                 <action id="-8" name="Set angle" sid="997352738218454" type="spr_sword">
                                     <param id="0" name="Angle">floor( (((spr_player_base.Angle + 45) % 360) / 90)) * 90</param>
-                                </action>
-                                <action id="0" name="Call function" sid="451001901545492" type="Function">
-                                    <param id="0" name="Name">&quot;ePlayer/Attacks.set_sword_z&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="909528067156062" type="spr_sword">
                                     <param id="0" name="Object">spr_player_mask</param>
@@ -377,6 +395,17 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="674024483962476" type="Audio">
+                                    <param id="0" name="Audio file">hit</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="166632374912000" type="obj_camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
                                 <action id="-12" name="Subtract from" sid="391802556671309" type="spr_player_base">
                                     <param id="0" name="Instance variable">health</param>
                                     <param id="1" name="Value">1</param>

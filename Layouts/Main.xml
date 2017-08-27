@@ -145,6 +145,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -167,6 +178,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -189,6 +211,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -213,7 +246,7 @@
                     </properties>
                     <instance-variables>
                         <State>follow</State>
-                        <Health>0</Health>
+                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Knockback">
@@ -288,7 +321,7 @@
                     </properties>
                     <instance-variables>
                         <State>follow</State>
-                        <Health>0</Health>
+                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Knockback">
@@ -363,7 +396,7 @@
                     </properties>
                     <instance-variables>
                         <State>follow</State>
-                        <Health>0</Health>
+                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Knockback">
@@ -466,7 +499,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <health>0</health>
+                        <health>5</health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -504,11 +537,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>257</x>
-                        <y>207</y>
+                        <x>247</x>
+                        <y>152</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>54</height>
+                        <width>36</width>
+                        <height>36</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -533,14 +566,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-96</x>
-                        <y>-64</y>
+                        <x>-134</x>
+                        <y>-7</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -585,6 +618,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -607,6 +651,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -629,6 +684,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -651,6 +717,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -673,6 +750,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -695,6 +783,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -717,6 +816,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -739,6 +849,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -761,6 +882,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -783,6 +915,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -805,6 +948,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -827,6 +981,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -849,6 +1014,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -871,6 +1047,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -893,6 +1080,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -915,6 +1113,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -937,6 +1146,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -959,6 +1179,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -981,6 +1212,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1003,6 +1245,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1025,6 +1278,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1047,6 +1311,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1069,6 +1344,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1091,6 +1377,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1113,6 +1410,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1135,6 +1443,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1157,6 +1476,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1179,6 +1509,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1201,6 +1542,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1223,6 +1575,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1245,6 +1608,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1267,6 +1641,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1289,6 +1674,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1311,6 +1707,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1333,6 +1740,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1355,6 +1773,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1377,6 +1806,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1399,6 +1839,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1421,6 +1872,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1443,6 +1905,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1465,6 +1938,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1487,6 +1971,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1509,6 +2004,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1531,6 +2037,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1553,6 +2070,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1575,6 +2103,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1597,6 +2136,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1619,6 +2169,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1641,6 +2202,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1663,6 +2235,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1685,6 +2268,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1707,6 +2301,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1729,6 +2334,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1751,6 +2367,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1773,6 +2400,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1795,6 +2433,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1817,6 +2466,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1839,6 +2499,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1861,6 +2532,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1883,6 +2565,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1905,6 +2598,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="VHSDamage">
+                            <parameters>
+                                <amount>0.3</amount>
+                                <intensity>0.8</intensity>
+                                <lines>200</lines>
+                                <power>0.7</power>
+                                <seed>0</seed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1916,6 +2620,79 @@
                         <depth>0</depth>
                         <hotspotX>0.517241359</hotspotX>
                         <hotspotY>0.826086938</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="gui" sid="349209966984015">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Text" uid="76">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>14</x>
+                        <y>8</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text" uid="77">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>428</x>
+                        <y>8</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1935,22 +2712,6 @@
                     <lines>200</lines>
                     <power>0</power>
                     <seed>0</seed>
-                </parameters>
-            </effect-instance>
-        </effect-type>
-        <effect-type name="RGBAChannelSeparation">
-            <effect id="separatechannel" />
-            <effect-instance type="RGBAChannelSeparation">
-                <parameters>
-                    <alpha-x>0.0</alpha-x>
-                    <alpha-y>0.0</alpha-y>
-                    <blue-x>0.0</blue-x>
-                    <blue-y>0.0</blue-y>
-                    <green-x>0.0</green-x>
-                    <green-y>0.0</green-y>
-                    <intensity>1</intensity>
-                    <red-x>0.0</red-x>
-                    <red-y>0.0</red-y>
                 </parameters>
             </effect-instance>
         </effect-type>

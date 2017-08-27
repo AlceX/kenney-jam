@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>elMenu</name>
+    <events>
+        <event-block sid="680626199778585">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="410504084746724" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="397916336017903" type="Audio">
+                    <param id="0" name="Audio file">birdtalk_menu</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;menu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="368507111202383">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="807980931224144" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="119472904383057" type="Function">
+                    <param id="0" name="Name">&quot;glitch&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="887418595269988">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="945393440786985" type="Keyboard">
+                    <param id="0" name="Key">81 (Q)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="538317493126262" type="Audio">
+                    <param id="0" name="Tag">&quot;menu&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="669057683835419" type="System">
+                    <param id="0" name="Layout">Main</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="789803661272004">
+            <conditions>
+                <condition id="0" name="On function" sid="620027861095504" type="Function">
+                    <param id="0" name="Name">&quot;glitch&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-28" name="Set effect parameter" sid="579986496356830" type="glitch">
+                    <param id="0" name="Effect">&quot;VHSDamage&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">40</param>
+                </action>
+                <action id="-16" name="Wait" sid="109451190789473" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="801617489451814" type="glitch">
+                    <param id="0" name="Effect">&quot;VHSDamage&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="577538338995051">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="166281678182991" type="System">
+                            <param id="0" name="Count">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="216921031449240" type="System">
+                            <param id="0" name="Seconds">0.05*loopindex</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="747766760821196" type="glitch">
+                            <param id="0" name="Effect">&quot;VHSDamage&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">Random(100)/1000</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="271645365244848" type="glitch">
+                            <param id="0" name="Effect">&quot;VHSDamage&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">cos(time)/10</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="489765580974375" type="glitch">
+                            <param id="0" name="Effect">&quot;VHSDamage&quot;</param>
+                            <param id="1" name="Parameter index">4</param>
+                            <param id="2" name="Value">random(250) + 50</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -5,18 +5,170 @@
     <events>
         <include>eEnemies</include>
         <include>ePlayer</include>
-        <event-group description="" sid="366181770019009" title="elMain/ZOrdering">
+        <variable constant="0" name="time_between_spawns" sid="420848975795355" static="0" type="number">10</variable>
+        <variable constant="0" name="timer" sid="480830160353639" static="0" type="number">10</variable>
+        <event-block sid="508028150492240">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="108280677921352" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="787749661541706" type="Audio">
+                    <param id="0" name="Audio file">birdtalk_main</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;main&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="912693568235834" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="552218453500112" type="System">
+                    <param id="0" name="Variable">time_between_spawns</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-9" name="Set value" sid="356656703065948" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
             <sub-events>
-                <event-block sid="611111024373114">
+                <event-block sid="970415744722314">
                     <conditions>
-                        <condition id="-24" name="For Each (ordered)" sid="255695598353306" type="System">
-                            <param id="0" name="Object">ZOrder</param>
-                            <param id="1" name="Expression">ZOrder.Y</param>
-                            <param id="2" name="Order">0</param>
+                        <condition id="-11" name="For Each" sid="969228806378334" type="System">
+                            <param id="0" name="Object">spr_background_objects</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="956647375671359">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="944999468841443" type="System">
+                                    <param id="0" name="First value">random(0, 10)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="352740904079827" type="spr_background_objects">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;VHSDamage&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="910011245936396">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="727224668520041" type="spr_player_base">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="251139518480402" type="Audio">
+                    <param id="0" name="Tag">&quot;main&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="258929653544639" type="System">
+                    <param id="0" name="Layout">GameOver</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>The Wait 0 seconds is for thing like the swords Z ordering to work.</comment>
+        <event-block sid="611111024373114">
+            <conditions>
+                <condition id="-24" name="For Each (ordered)" sid="255695598353306" type="System">
+                    <param id="0" name="Object">ZOrder</param>
+                    <param id="1" name="Expression">ZOrder.Y</param>
+                    <param id="2" name="Order">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="584005749138661" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+                <action id="-24" name="Move to top" sid="132540124878083" type="ZOrder" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="567703874610268" title="elMain/GUI">
+            <sub-events>
+                <event-block sid="654993792303265">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="113525100967340" type="Text">
+                            <param id="0" name="Unique ID">76</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-24" name="Move to top" sid="132540124878083" type="ZOrder" />
+                        <action id="0" name="Set text" sid="673031067340890" type="Text">
+                            <param id="0" name="Text">&quot;Health: &quot; &amp; spr_player_base.health</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="900809466799653">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="805031967637454" type="Text">
+                            <param id="0" name="Unique ID">77</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="738603771112421" type="Text">
+                            <param id="0" name="Text">&quot;Score: &quot; &amp; Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Handles the infinite spawning of enemies." sid="395487234525726" title="elMain/Spawning">
+            <sub-events>
+                <event-block sid="160747190627503">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="279102071581807" type="System">
+                            <param id="0" name="Interval (seconds)">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="491605152958710" type="System">
+                            <param id="0" name="Variable">time_between_spawns</param>
+                            <param id="1" name="Value">clamp(time_between_spawns-1, 5, 10)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="397710280285831">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="753817014567404" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="236789384359473" type="System">
+                            <param id="0" name="Variable">timer</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="561488150326035">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="613790452308819" type="System">
+                            <param id="0" name="Variable">timer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="402060415884694" type="System">
+                            <param id="0" name="Object to create">spr_simple_enemy</param>
+                            <param id="1" name="Layer">&quot;objects&quot;</param>
+                            <param id="2" name="X">random(100, LayoutWidth - 100)</param>
+                            <param id="3" name="Y">random(100, LayoutHeight - 100)</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="407002798814718" type="spr_simple_enemy">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;HexagonalPixellate&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="715407631191981" type="System">
+                            <param id="0" name="Variable">timer</param>
+                            <param id="1" name="Value">time_between_spawns</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
