@@ -24,6 +24,7 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Evan Wallace" id="hexpixellate">Hexagonal pixellate</effect>
         <effect author="Jan Raap a.k.a. oppenheimer" id="separatechannel">RGBA channel separation</effect>
         <effect author="Joannesalfa and oppenheimer" id="vhs">VHS damage</effect>
     </used-effects>
@@ -308,6 +309,9 @@
             <effects>
                 <effect-type name="VHSDamage">
                     <effect id="vhs" />
+                </effect-type>
+                <effect-type name="HexagonalPixellate">
+                    <effect id="hexpixellate" />
                 </effect-type>
             </effects>
         </family>

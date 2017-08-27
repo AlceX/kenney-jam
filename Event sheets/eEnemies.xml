@@ -66,7 +66,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>HACK: Kinda terrible but since I know I won&apos;t have time for more than &quot;simple_enemy&quot;...</comment>
+                <comment bookmark="1">HACK: Kinda terrible but since I know I won&apos;t have time for more than &quot;simple_enemy&quot;...</comment>
                 <event-block sid="418156581044226">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="800822662590356" type="Enemies">
@@ -246,6 +246,10 @@
                                 <action id="0" name="Call function" sid="435472548336908" type="Function">
                                     <param id="0" name="Name">&quot;eEnemies/CommonBehaviors.Recieve_Damage&quot;</param>
                                     <param id="1" name="Parameter {n}">spr_simple_enemy.UID{###}spr_sword.Angle</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="245345906973710" type="spr_simple_enemy">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                                 <action behavior="Knockback" id="0" name="Set speed" sid="450621270782417" type="spr_simple_enemy">
                                     <param id="0" name="Speed">Self.Knockback.Speed * 2</param>

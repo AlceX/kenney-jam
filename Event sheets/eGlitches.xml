@@ -128,12 +128,21 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <comment bookmark="1">HACK: assuming again that the only enemy I&apos;ll have is simple_enemy... but it&apos;d be fixed by having a generic enemy spawner in eEnemies.</comment>
                         <event-block sid="280630237518736">
-                            <conditions />
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="188626278657171" type="Enemies">
+                                    <param id="0" name="Unique ID">Function.Call(&quot;eEnemies/SimpleEnemy.Spawn&quot;)</param>
+                                </condition>
+                            </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="764032455281348" type="Function">
                                     <param id="0" name="Name">&quot;eGlitches/Effects.enemy_vhs_distortion&quot;</param>
-                                    <param id="1" name="Parameter {n}">Function.Call(&quot;eEnemies/SimpleEnemy.Spawn&quot;)</param>
+                                    <param id="1" name="Parameter {n}">Enemies.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="102496080361881" type="Function">
+                                    <param id="0" name="Name">&quot;eGlitches/Effects.enemy_pixellate&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -143,6 +152,18 @@
         </event-group>
         <event-group description="Controls glitch looking screen effects." sid="327711995662255" title="eGlitches/Effects">
             <sub-events>
+                <comment>Kinda annoys me that you seemingly can&apos;t disable effects from the editor...</comment>
+                <event-block sid="384050020748740">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="535854844381876" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="333691811810471" type="Enemies">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;HexagonalPixellate&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="241804544277009">
                     <conditions>
                         <condition id="0" name="On function" sid="815956361416341" type="Function">
@@ -256,6 +277,29 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="957719497107013">
+                    <conditions>
+                        <condition id="0" name="On function" sid="198338504568571" type="Function">
+                            <param id="0" name="Name">&quot;eGlitches/Effects.enemy_pixellate&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="151947926221538">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="598102769310484" type="Enemies">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="194270112402963" type="Enemies">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;HexagonalPixellate&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
