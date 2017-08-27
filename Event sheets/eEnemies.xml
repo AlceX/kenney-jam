@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eEnemies</name>
+    <events>
+        <event-group description="For code common to all enemy types, like knockback." sid="826969774823805" title="eEnemies/CommonBehaviors">
+            <sub-events>
+                <comment>0: UID &#x0D;&#x0A;1: angle of motion for knockback&#x0D;&#x0A;2: damage dealt</comment>
+                <event-block sid="838634246191891">
+                    <conditions>
+                        <condition id="0" name="On function" sid="746351928598472" type="Function">
+                            <param id="0" name="Name">&quot;eEnemies/CommonBehaviors.Recieve_Damage&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Called from ePlayer/Attacks</comment>
+                        <event-block sid="114680647824706">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="552772605234527" type="Enemies">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="561435044372700" type="Enemies">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;knockback&quot;</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="569385081039866" type="Enemies">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">Function.Param(2)</param>
+                                </action>
+                                <action behavior="Invincibility" id="0" name="Flash" sid="470638004493012" type="Enemies">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                                <action behavior="Knockback" id="0" name="Set speed" sid="834995890337074" type="Enemies">
+                                    <param id="0" name="Speed">300</param>
+                                </action>
+                                <action behavior="Knockback" id="1" name="Set acceleration" sid="269429433218006" type="Enemies">
+                                    <param id="0" name="Acceleration">-300</param>
+                                </action>
+                                <action behavior="Knockback" id="3" name="Set angle of motion" sid="969330417477953" type="Enemies">
+                                    <param id="0" name="Angle">Function.Param(1)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="986287266516183">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="787186272352240" type="Enemies">
+                                            <param id="0" name="Instance variable">Health</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="175953650090943" type="Enemies">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Value">&quot;death&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Behaviour for the simple enemy. Basically just follows the player." sid="677224494252424" title="eEnemies/SimpleEnemy">
+            <sub-events>
+                <event-block sid="381947024117111">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="310414554497242" type="spr_simple_enemy">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;knockback&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="follow" id="0" name="Set speed" sid="961906256313114" type="spr_simple_enemy">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="861714064713514">
+                            <conditions>
+                                <condition behavior="Knockback" id="0" name="Compare speed" sid="840707401878125" type="spr_simple_enemy">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="142026030397358" type="spr_simple_enemy">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;follow&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="848040268217773">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="831057320880813" type="spr_simple_enemy">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;follow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="follow" id="3" name="Set angle of motion" sid="841182415424186" type="spr_simple_enemy">
+                            <param id="0" name="Angle">angle(Self.X, Self.Y, spr_player_base.X, spr_player_base.Y)</param>
+                        </action>
+                        <action behavior="follow" id="0" name="Set speed" sid="596818879094905" type="spr_simple_enemy">
+                            <param id="0" name="Speed">120</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="572952300522228">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="784616989186256" type="spr_simple_enemy">
+                                    <param id="0" name="Object">spr_player_base</param>
+                                </condition>
+                                <condition behavior="Invincibility" id="0" inverted="1" name="Is flashing" sid="923396177867009" type="spr_player_mask" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="204129731833677" type="Function">
+                                    <param id="0" name="Name">&quot;ePlayer/Damage.Recieve_Damage&quot;</param>
+                                    <param id="1" name="Parameter {n}">spr_simple_enemy.UID</param>
+                                </action>
+                                <action behavior="follow" id="5" name="Set enabled" sid="519903713554242" type="spr_simple_enemy">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="2" name="Stop" sid="359133808894859" type="spr_simple_enemy" />
+                                <action id="5" name="Set frame" sid="798119980399037" type="spr_simple_enemy">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="347724542334619" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="3" name="Start" sid="817927005497212" type="spr_simple_enemy">
+                                    <param id="0" name="From">0</param>
+                                </action>
+                                <action behavior="follow" id="5" name="Set enabled" sid="224781584937508" type="spr_simple_enemy">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="364301116635195">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="544701660707705" type="spr_simple_enemy">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="912784775210699" type="spr_simple_enemy">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;die&quot;</param>
+                        </action>
+                        <action behavior="follow" id="5" name="Set enabled" sid="864107181428625" type="spr_simple_enemy">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="367217828055334" type="spr_simple_enemy">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="601168103473496" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="587678113374427" type="spr_simple_enemy" />
+                    </actions>
+                </event-block>
+                <event-block sid="479709546562556">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="585999932354173" type="spr_simple_enemy">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">spr_player_base.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="859555243332140" type="spr_simple_enemy">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="715481478731750">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="128285107738445" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="326415956377615" type="spr_simple_enemy">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

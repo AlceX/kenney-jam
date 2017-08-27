@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>elMain</name>
     <events>
+        <include>eEnemies</include>
         <include>ePlayer</include>
     </events>
 </c2eventsheet>

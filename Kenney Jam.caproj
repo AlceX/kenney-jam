@@ -18,6 +18,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
@@ -51,11 +52,17 @@
         <object-folder name="Player">
             <object-type name="spr_player_base" sid="446943178353975">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="health" sid="955651630432035" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="8Direction" sid="522174908908456">
                         <behavior id="EightDir" />
                     </behavior-type>
                     <behavior-type name="SwordDash" sid="884362552607943">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Knockback" sid="958242150371229">
                         <behavior id="Bullet" />
                     </behavior-type>
                 </behaviors>
@@ -73,6 +80,9 @@
                 <behaviors>
                     <behavior-type name="Pin" sid="773444651238935">
                         <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Invincibility" sid="529154025987802">
+                        <behavior id="Flash" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -193,13 +203,87 @@
                 <plugin id="Function" />
             </object-type>
         </object-folder>
+        <object-folder name="Enemies">
+            <object-type name="spr_simple_enemy" sid="407868082566278">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="follow" sid="308742170444957">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="950251413927205" speed="7">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\abstract_platformer\PNG\Enemies\enemyWalking_2.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\abstract_platformer\PNG\Enemies\enemyWalking_1.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="748753336999979" speed="5">
+                        <frame duration="1" hotspotX="0.510204" hotspotY="0.5" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\abstract_platformer\PNG\Enemies\enemyWalking_3.png">
+                            <collision-poly>
+                                <point x="0.204082" y="0.263158" />
+                                <point x="0.489796" y="0" />
+                                <point x="0.816327" y="0.236842" />
+                                <point x="0.836735" y="0.5" />
+                                <point x="0.979592" y="0.973684" />
+                                <point x="0.489796" y="0.894737" />
+                                <point x="0.0204082" y="0.973684" />
+                                <point x="0.183673" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.514286" hotspotY="0.512195" original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\abstract_platformer\PNG\Enemies\enemyWalking_4.png">
+                            <collision-poly>
+                                <point x="0.142857" y="0.121951" />
+                                <point x="0.485714" y="0" />
+                                <point x="0.828571" y="0.146341" />
+                                <point x="0.942857" y="0.487805" />
+                                <point x="0.971429" y="0.97561" />
+                                <point x="0.485714" y="0.829268" />
+                                <point x="0.0285714" y="0.97561" />
+                                <point x="0.0285714" y="0.487805" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="tm_rpg_base" sid="969925967062855">
             <plugin id="Tilemap" />
             <texture original-source="C:\Users\gamedev\Desktop\Kenney Jam\assets\rpg\Spritesheet\RPGpack_sheet.png" />
             <tiles />
         </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Enemies" plugin-id="Sprite" sid="272080187583977">
+            <members>
+                <member>spr_simple_enemy</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="State" sid="685587039056500" type="string" />
+                <instance-variable name="Health" sid="753181953708362" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Knockback" sid="916743553070156">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Invincibility" sid="408676811997347">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder>
         <layout>Main.xml</layout>
     </layout-folder>
@@ -208,6 +292,7 @@
             <event-sheet>elMain.xml</event-sheet>
         </event-folder>
         <event-sheet>ePlayer.xml</event-sheet>
+        <event-sheet>eEnemies.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />

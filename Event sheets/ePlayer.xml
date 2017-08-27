@@ -88,7 +88,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="For now just handles sword slashing." sid="600624675499879" title="ePlayer/Attacks">
+        <event-group description="Handles attacks (sword slashing) and calling the appropiate enemy damage functions." sid="600624675499879" title="ePlayer/Attacks">
             <sub-events>
                 <event-block sid="980426768415060">
                     <conditions>
@@ -102,6 +102,22 @@
                             <param id="1" name="Image point (optional)">&quot;sword&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="344278444192239">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="368217580049945" type="spr_sword">
+                                    <param id="0" name="Object">Enemies</param>
+                                </condition>
+                                <condition behavior="Invincibility" id="0" inverted="1" name="Is flashing" sid="504758284488498" type="Enemies" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="112016841219824" type="Function">
+                                    <param id="0" name="Name">&quot;eEnemies/CommonBehaviors.Recieve_Damage&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.UID{###}spr_sword.Angle{###}1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="801173704912936">
                     <conditions>
@@ -246,6 +262,49 @@
                                 </action>
                                 <action behavior="SwordDash" id="1" name="Set acceleration" sid="317114509509170" type="spr_player_base">
                                     <param id="0" name="Acceleration">Self.SwordDash.Speed * -2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Handles recieving damage from enemies." sid="374371993455927" title="ePlayer/Damage">
+            <sub-events>
+                <comment>0: Enemy UID</comment>
+                <event-block sid="326136929194823">
+                    <conditions>
+                        <condition id="0" name="On function" sid="515807541545246" type="Function">
+                            <param id="0" name="Name">&quot;ePlayer/Damage.Recieve_Damage&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Called from eEnemies.</comment>
+                        <event-block sid="767433772393578">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="534520682427793" type="Enemies">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="391802556671309" type="spr_player_base">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Invincibility" id="0" name="Flash" sid="329682327381966" type="spr_player_mask">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                                <action behavior="Knockback" id="0" name="Set speed" sid="695854249788546" type="spr_player_base">
+                                    <param id="0" name="Speed">200</param>
+                                </action>
+                                <action behavior="Knockback" id="1" name="Set acceleration" sid="914135191934999" type="spr_player_base">
+                                    <param id="0" name="Acceleration">-200</param>
+                                </action>
+                                <action behavior="Knockback" id="3" name="Set angle of motion" sid="326485045008366" type="spr_player_base">
+                                    <param id="0" name="Angle">angle(Enemies.X, Enemies.Y, Self.X, Self.Y)</param>
                                 </action>
                             </actions>
                         </event-block>
