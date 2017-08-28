@@ -59,6 +59,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>CAMBIO</comment>
         <event-block sid="910011245936396">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="727224668520041" type="spr_player_base">
@@ -74,9 +75,12 @@
                 <action id="-2" name="Go to layout" sid="258929653544639" type="System">
                     <param id="0" name="Layout">GameOver</param>
                 </action>
+                <action id="-9" name="Set value" sid="402703531720737" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
-        <comment>The Wait 0 seconds is for thing like the swords Z ordering to work.</comment>
         <event-block sid="611111024373114">
             <conditions>
                 <condition id="-24" name="For Each (ordered)" sid="255695598353306" type="System">
@@ -92,6 +96,7 @@
                 <action id="-24" name="Move to top" sid="132540124878083" type="ZOrder" />
             </actions>
         </event-block>
+        <comment>The Wait 0 seconds is for thing like the swords Z ordering to work.</comment>
         <event-group description="" sid="567703874610268" title="elMain/GUI">
             <sub-events>
                 <event-block sid="654993792303265">
